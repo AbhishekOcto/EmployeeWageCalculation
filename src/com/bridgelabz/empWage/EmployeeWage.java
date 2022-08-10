@@ -7,15 +7,14 @@ public class EmployeeWage {
 	public static final int WorkingDays=20;
 	public static final int MonthMaxHours=100;
 
-	public static void main(String[] args) {
+	 public void wageCalculation() {
 		System.out.println("Welcome to Employee Wage Calculation Program");
-		
-		//added UC6
-		
 		int numberOfHours=0;
-		int EmpWagePerDay=0, nHours=0;
+		int nHours=0;
 		int totalWorkingDays=0, totalWorkingHours=0;
 		int totalEmployeeWage=0;
+		
+		
 		while(totalWorkingHours<MonthMaxHours && totalWorkingDays<WorkingDays) {
 		int isPresent =(int) Math.floor(Math.random()*10) % 3;
 		switch (isPresent) {
@@ -51,9 +50,12 @@ public class EmployeeWage {
 		
 		totalEmployeeWage= totalWorkingHours * WagePerHour;
 		System.out.println("\nTotal Employee Wage without Condition is "+ totalEmployeeWage);
-		
-
 		}
-
+		}
+	
+     public static void main(String[] args) {
+	  EmployeeWage ew = new EmployeeWage(); 
+	  ew.wageCalculation();
+   
 	}
 }
